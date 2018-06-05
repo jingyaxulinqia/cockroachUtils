@@ -9,7 +9,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class ContextFactory {
     private static ConfigurableApplicationContext ctx;
 
-    public static ConfigurableApplicationContext getContext() {
+    public static ConfigurableApplicationContext getContext(String[] args) {
         if(ctx != null){
             return ctx;
         }
@@ -17,7 +17,7 @@ public class ContextFactory {
             if(ctx != null){
                 return ctx;
             }
-            ctx = SpringApplication.run(ContextFactory.class);
+            ctx = SpringApplication.run(ContextFactory.class, args);
             return ctx;
         }
     }

@@ -5,8 +5,7 @@
 
 	<groupId>com.linqia.spring.utils</groupId>
 	<artifactId>cockroachUtils</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<version>0.0.1.SNAPSHOT</version>
 
 	<name>cockroachUtils</name>
 	<description>Demo project for Spring Boot</description>

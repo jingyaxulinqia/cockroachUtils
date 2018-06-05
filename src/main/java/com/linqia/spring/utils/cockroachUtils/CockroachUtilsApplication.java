@@ -15,13 +15,9 @@ import java.util.List;
 public class CockroachUtilsApplication {
 
 	public static void main(String[] args){
-	    Injector injector = Guice.createInjector();
-        Abc abc = injector.getInstance(Abc.class);
-        System.out.println("abc = "+abc.val);
-//            ContextFactory ctxFactory = injector.getInstance(ContextFactory.class);
-//        ConfigurableApplicationContext ctx = ctxFactory.getContext();
-        ConfigurableApplicationContext ctx = ContextFactory.getContext();
-        PeopleRepository peopleRepository = ctx.getBean("peopleRepository", PeopleRepository.class);
+
+        ConfigurableApplicationContext ctx = ContextFactory.getContext(args);
+        PeopleRepository peopleRepository = ctx.getBean(PeopleRepository.class);
         People kevin = new People("Leanne", "77876@gmail.com", 22, "2711 N 1st st, San Mateo" );
         peopleRepository.save(kevin);
         System.out.println("insert Leanne done!");
